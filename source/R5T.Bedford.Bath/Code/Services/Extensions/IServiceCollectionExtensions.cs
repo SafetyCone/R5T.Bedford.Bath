@@ -14,7 +14,7 @@ namespace R5T.Bedford.Bath
         /// Adds the <see cref="BinaryFileEqualityComparer"/> implementation of <see cref="IFileEqualityComparer"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceCollection AddBathBinaryFileEqualityComparer(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput)
+            IServiceAction<IHumanOutput> addHumanOutput)
         {
             services
                 .AddSingleton<IFileEqualityComparer, BinaryFileEqualityComparer>()
@@ -27,10 +27,10 @@ namespace R5T.Bedford.Bath
         /// <summary>
         /// Adds the <see cref="BinaryFileEqualityComparer"/> implementation of <see cref="IFileEqualityComparer"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
-        public static ServiceAction<IFileEqualityComparer> AddBathBinaryFileEqualityComparerAction(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput)
+        public static IServiceAction<IFileEqualityComparer> AddBathBinaryFileEqualityComparerAction(this IServiceCollection services,
+            IServiceAction<IHumanOutput> addHumanOutput)
         {
-            var serviceAction = new ServiceAction<IFileEqualityComparer>(() => services.AddBathBinaryFileEqualityComparer(addHumanOutput));
+            var serviceAction = ServiceAction<IFileEqualityComparer>.New(() => services.AddBathBinaryFileEqualityComparer(addHumanOutput));
             return serviceAction;
         }
 
@@ -38,7 +38,7 @@ namespace R5T.Bedford.Bath
         /// Adds the <see cref="TextFileEqualityComparer"/> implementation of <see cref="IFileEqualityComparer"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceCollection AddBathTextFileEqualityComparer(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput)
+            IServiceAction<IHumanOutput> addHumanOutput)
         {
             services
                 .AddSingleton<IFileEqualityComparer, TextFileEqualityComparer>()
@@ -52,9 +52,9 @@ namespace R5T.Bedford.Bath
         /// Adds the <see cref="TextFileEqualityComparer"/> implementation of <see cref="IFileEqualityComparer"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
         public static ServiceAction<IFileEqualityComparer> AddBathTextFileEqualityComparerAction(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput)
+            IServiceAction<IHumanOutput> addHumanOutput)
         {
-            var serviceAction = new ServiceAction<IFileEqualityComparer>(() => services.AddBathTextFileEqualityComparer(addHumanOutput));
+            var serviceAction = ServiceAction<IFileEqualityComparer>.New(() => services.AddBathTextFileEqualityComparer(addHumanOutput));
             return serviceAction;
         }
     }
