@@ -2,6 +2,7 @@
 using System.IO;
 
 using R5T.Bath;
+using R5T.Magyar.IO;
 
 
 namespace R5T.Bedford.Bath
@@ -20,8 +21,8 @@ namespace R5T.Bedford.Bath
         {
             bool output = true;
 
-            string[] lines1 = File.ReadAllLines(filePath1);
-            string[] lines2 = File.ReadAllLines(filePath2);
+            string[] lines1 = FileHelper.ReadAllLines(filePath1);
+            string[] lines2 = FileHelper.ReadAllLines(filePath2);
 
             output = this.CompareLineCounts(lines1, lines2);
             if (!output)
