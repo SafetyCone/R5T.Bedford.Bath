@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Bedford.Bath.Constructi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Bedford.Bath.Testing", "R5T.Bedford.Bath.Testing\R5T.Bedford.Bath.Testing.csproj", "{22AF0178-C429-4C83-AFB0-6BD98865FA0C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Dependencies", "_Dependencies", "{CF7FE279-CBCB-4F12-A692-D8B1FC442CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.T0064", "..\..\R5T.T0064\source\R5T.T0064\R5T.T0064.csproj", "{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +62,20 @@ Global
 		{22AF0178-C429-4C83-AFB0-6BD98865FA0C}.Release|x64.Build.0 = Release|Any CPU
 		{22AF0178-C429-4C83-AFB0-6BD98865FA0C}.Release|x86.ActiveCfg = Release|Any CPU
 		{22AF0178-C429-4C83-AFB0-6BD98865FA0C}.Release|x86.Build.0 = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|x64.Build.0 = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC06F446-77B3-4FA5-AB5E-25D6B1E6A525} = {CF7FE279-CBCB-4F12-A692-D8B1FC442CBD}
 	EndGlobalSection
 EndGlobal

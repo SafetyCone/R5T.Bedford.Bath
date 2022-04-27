@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.IO;
 
-using R5T.Bath;
+using R5T.Bath;using R5T.T0064;
 
 
 namespace R5T.Bedford.Bath
-{
-    public class BinaryFileEqualityComparer : IFileEqualityComparer
+{[ServiceImplementationMarker]
+    public class BinaryFileEqualityComparer : IFileEqualityComparer,IServiceImplementation
     {
         private IHumanOutput HumanOutput { get; }
 
