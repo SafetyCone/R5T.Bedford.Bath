@@ -21,8 +21,8 @@ namespace R5T.Bedford.Bath
         {
             bool output = true;
 
-            string[] lines1 = FileHelper.ReadAllLines(filePath1);
-            string[] lines2 = FileHelper.ReadAllLines(filePath2);
+            string[] lines1 = FileHelper.ReadAllLinesSynchronous(filePath1);
+            string[] lines2 = FileHelper.ReadAllLinesSynchronous(filePath2);
 
             output = this.CompareLineCounts(lines1, lines2);
             if (!output)
